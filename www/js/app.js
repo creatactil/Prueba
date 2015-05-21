@@ -7,10 +7,10 @@ var store;
 var $status;
 
 //URL of our asset dentef.com/files/re125-informacio_CURS_DR_INSTAL·LACIONS_RX_COVIB.pdf
-var assetURL = "https://dentef.com/files/re125-informacio_CURS_DR_INSTAL·LACIONS_RX_COVIB.pdf";
+var assetURL = "http://dentef.com/files/re125.pdf";
 
 //Nombre del archivo de nuestro archivo de datos importantes que no se incluyen con la aplicación
-var fileName = "re125-informacio_CURS_DR_INSTAL·LACIONS_RX_COVIB.pdf";
+var fileName = "re125.pdf";
 
 function init() {
 	
