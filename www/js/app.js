@@ -7,10 +7,10 @@ var store;
 var $status;
 
 //URL of our asset dentef.com/files/re125-informacio_CURS_DR_INSTAL·LACIONS_RX_COVIB.pdf
-var assetURL = "http://dentef.com/files/re125.pdf";
+var assetURL = "http://dentef.com/files/";
 
 //Nombre del archivo de nuestro archivo de datos importantes que no se incluyen con la aplicación
-var fileName = "re125.pdf";
+var fileName = "re.pdf";
 
 function init() {
 	
@@ -26,6 +26,8 @@ function init() {
 }
 
 function downloadAsset() {
+	alert ("Descarga");
+	
 	var fileTransfer = new FileTransfer();
 	console.log("About to start transfer");
 	fileTransfer.download(assetURL, store + fileName, 
