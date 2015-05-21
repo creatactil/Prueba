@@ -42,4 +42,7 @@ function downloadAsset() {
 //I'm only called when the file exists or has been downloaded.
 function appStart() {
 	$status.innerHTML = "App ready!";
+	alert ("OK");
+	console.log(store + fileName);
+	window.open (store + fileName, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');
 }
