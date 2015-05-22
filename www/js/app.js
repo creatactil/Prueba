@@ -11,8 +11,9 @@ var assetURL = "http://dentef.com/files/";
 
 //Nombre del archivo de nuestro archivo de datos importantes que no se incluyen con la aplicación
 var fileName = "re.pdf";
-		alert (fileName);
 		
+window.open (assetURL + fileName, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');		
+
 function init() {
 	
 	$status = document.querySelector("#status");
@@ -22,10 +23,7 @@ function init() {
 	store = cordova.file.dataDirectory;
 	 	
 		//var x = store + '/' + filename;
-		alert (store);
 		
-		
-		alert (store + fileName);
 		
 	//Check for the file. 
 	window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
@@ -39,7 +37,7 @@ function downloadAsset() {
 	fileTransfer.download(assetURL, store + fileName, 
 		function(entry) {
 			console.log("Success!");
-			
+			alert (store + fileName);
 			appStart();
 		}, 
 		function(err) {
@@ -51,7 +49,7 @@ function downloadAsset() {
 //I'm only called when the file exists or has been downloaded.
 function appStart() {
 	$status.innerHTML = "App ready!";
-	alert ("OK");
+
 	console.log(store + fileName);
 	window.open (store + fileName, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');
 }
