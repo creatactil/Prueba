@@ -14,9 +14,9 @@ var fileName = "re.pdf";
 
 var uri = encodeURI(assetURL + fileName);
 
-alert (uri);
+
 		
-window.open (uri, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');		
+		
 
 function init() {
 	
@@ -55,5 +55,5 @@ function appStart() {
 	$status.innerHTML = "App ready!";
 
 	console.log(store + fileName);
-	window.open (store + fileName, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');
+	window.open (uri, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');
 }
