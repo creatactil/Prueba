@@ -19,7 +19,7 @@ function init() {
 	$status.innerHTML = "Checking for data file.";
 
 	store = cordova.file.dataDirectory;
-	 	alert (store);
+	 	alert (store + filename);
 	//Check for the file. 
 	window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
 
