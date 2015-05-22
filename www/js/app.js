@@ -11,8 +11,10 @@ var assetURL = "http://dentef.com/files/";
 
 //Nombre del archivo de nuestro archivo de datos importantes que no se incluyen con la aplicación
 var fileName = "re.pdf";
+
+var uri = encodeURI(assetURL + fileName);
 		
-window.open (assetURL + fileName, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');		
+window.open (uri, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');		
 
 function init() {
 	
