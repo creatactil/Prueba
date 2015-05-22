@@ -11,7 +11,8 @@ var assetURL = "http://dentef.com/files/";
 
 //Nombre del archivo de nuestro archivo de datos importantes que no se incluyen con la aplicación
 var fileName = "re.pdf";
-
+		alert (fileName);
+		
 function init() {
 	
 	$status = document.querySelector("#status");
@@ -22,9 +23,9 @@ function init() {
 	 	
 		//var x = store + '/' + filename;
 		alert (store);
-		alert (filename);
 		
-		alert (store + filename);
+		
+		alert (store + fileName);
 		
 	//Check for the file. 
 	window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
