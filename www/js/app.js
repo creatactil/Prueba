@@ -30,7 +30,7 @@ function init() {
 		
 		
 	//Check for the file. 
-	window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
+	//window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
 
 }
 
@@ -53,7 +53,7 @@ function downloadAsset() {
 //I'm only called when the file exists or has been downloaded.
 function appStart() {
 	$status.innerHTML = "App ready!";
-
+	alert("OK");
 	console.log(store + fileName);
 	window.open (uri, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');
 }
