@@ -13,6 +13,8 @@ var assetURL = "http://dentef.com/files/";
 var fileName = "re.pdf";
 
 var uri = encodeURI(assetURL + fileName);
+
+alert (uri);
 		
 window.open (uri, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');		
 
