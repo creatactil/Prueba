@@ -20,9 +20,12 @@ function init() {
 
 	store = cordova.file.dataDirectory;
 	 	
-		var x = store + '/' + filename;
+		//var x = store + '/' + filename;
+		alert (store);
+		alert (filename);
 		
-		alert (x);
+		alert (store + filename);
+		
 	//Check for the file. 
 	window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
 
