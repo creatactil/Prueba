@@ -33,7 +33,7 @@ function downloadAsset(entry) {
 	alert(fileName);
 	alert(assetURL + fileName);
 	
-	var ruta = entry.toURL();
+	ruta = entry.toURL();
 	
 	alert (ruta);
 	
