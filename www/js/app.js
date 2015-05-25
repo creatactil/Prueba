@@ -29,20 +29,24 @@ function init() {
 }
 
 function downloadAsset(entry) {
-	alert(store);
-	alert(fileName);
-	alert(assetURL + fileName);
+	var uri = encodeURI("http://dentef.com/files/Anexo.pdf");
+	fileURL = "cdvfile://localhost/persistent/path/to/downloads/";
 	
-	ruta = entry.toURL();
 	
-	alert (ruta);
+	
+	alert(uri);
+	alert(fileURL);
+	
+	//ruta = entry.toURL();
+	
+	//alert (ruta);
 	
 	
 	var fileTransfer = new FileTransfer();
 	console.log("About to start transfer");
 		
 	
-	fileTransfer.download(assetURL + fileName, store, 
+	fileTransfer.download(uri, fileURL, 
 		function(entry) {
 			console.log("Success!");
 			
@@ -58,5 +62,6 @@ function downloadAsset(entry) {
 
 //I'm only called when the file exists or has been downloaded.
 function appStart() {
+	alert(OK);
 	$status.innerHTML = "App ready!";
 }
