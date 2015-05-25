@@ -7,7 +7,7 @@ var store;
 var $status;
 
 //URL of our asset
-var assetURL = "http://dentef.com/files/Anexo.pdf";
+var assetURL = "http://dentef.com/files/";
 
 //File name of our important data file we didn't ship with the app
 var fileName = "Anexo.pdf";
@@ -22,12 +22,16 @@ function init() {
 
 	//Check for the file. 
 	window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
-
+	
+	
 }
 
 function downloadAsset() {
 	var fileTransfer = new FileTransfer();
 	console.log("About to start transfer");
+	alert(store);
+	alert(filename);
+	
 	fileTransfer.download(assetURL, store + fileName, 
 		function(entry) {
 			console.log("Success!");
