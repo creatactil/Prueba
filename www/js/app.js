@@ -30,7 +30,7 @@ function downloadAsset() {
 	var fileTransfer = new FileTransfer();
 	console.log("About to start transfer");
 	alert(store);
-	alert(filename);
+	alert(fileName);
 	
 	fileTransfer.download(assetURL, store + fileName, 
 		function(entry) {
