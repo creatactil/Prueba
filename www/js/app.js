@@ -33,12 +33,13 @@ function downloadAsset() {
 	console.log("About to start transfer");
 	alert(store);
 	alert(fileName);
+	alert(uri);	
 	
 	fileTransfer.download(uri, store, 
 		function(entry) {
 			console.log("Success!");
 			
-		alert(uri);	
+		
 			
 			appStart();
 		}, 
