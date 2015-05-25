@@ -12,7 +12,7 @@ var assetURL = "http://dentef.com/files/";
 //File name of our important data file we didn't ship with the app
 var fileName = "Anexo.pdf";
 
-var uri = encodeURI(server + fileName);
+var uri = encodeURI(assetURL + fileName);
 
 function init() {
 	
