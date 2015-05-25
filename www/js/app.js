@@ -6,17 +6,11 @@ var store;
 //Used for status updates
 var $status;
 
-//
-var assetURL = "http://dentef.com/files/";
+//URL of our asset
+var assetURL = "http://dentef.com/files/Anexo.pdf";
 
-//Nombre del archivo de nuestro archivo de datos importantes que no se incluyen con la aplicación
-var fileName = "re.pdf";
-
-var uri = encodeURI(assetURL + fileName);
-
-
-		
-		
+//File name of our important data file we didn't ship with the app
+var fileName = "Anexo.pdf";
 
 function init() {
 	
@@ -25,23 +19,18 @@ function init() {
 	$status.innerHTML = "Checking for data file.";
 
 	store = cordova.file.dataDirectory;
-	 	
-		//var x = store + '/' + filename;
-		
-		
+
 	//Check for the file. 
-	//window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
+	window.resolveLocalFileSystemURL(store + fileName, appStart, downloadAsset);
 
 }
 
 function downloadAsset() {
-		
 	var fileTransfer = new FileTransfer();
 	console.log("About to start transfer");
 	fileTransfer.download(assetURL, store + fileName, 
 		function(entry) {
 			console.log("Success!");
-			alert (store + fileName);
 			appStart();
 		}, 
 		function(err) {
@@ -53,7 +42,4 @@ function downloadAsset() {
 //I'm only called when the file exists or has been downloaded.
 function appStart() {
 	$status.innerHTML = "App ready!";
-	alert("OK");
-	console.log(store + fileName);
-	window.open (uri, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');
 }
