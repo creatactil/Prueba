@@ -12,6 +12,8 @@ var assetURL = "http://dentef.com/files/";
 //File name of our important data file we didn't ship with the app
 var fileName = "Anexo.pdf";
 
+var uri = encodeURI(server + fileName);
+
 function init() {
 	
 	$status = document.querySelector("#status");
@@ -32,9 +34,12 @@ function downloadAsset() {
 	alert(store);
 	alert(fileName);
 	
-	fileTransfer.download(assetURL, store + fileName, 
+	fileTransfer.download(uri, store, 
 		function(entry) {
 			console.log("Success!");
+			
+		alert(uri);	
+			
 			appStart();
 		}, 
 		function(err) {
