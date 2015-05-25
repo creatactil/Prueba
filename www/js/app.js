@@ -28,12 +28,12 @@ function init() {
 	
 }
 
-function downloadAsset(dir) {
+function downloadAsset(entry) {
 	alert(store);
 	alert(fileName);
 	alert(assetURL + fileName);
 	
-	var ruta = dir.toURL() + '/' + fileName;
+	var ruta = entry.toInternalURL();
 	
 	alert (ruta);
 	
