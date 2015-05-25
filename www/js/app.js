@@ -29,11 +29,14 @@ function init() {
 }
 
 function downloadAsset() {
-	var fileTransfer = new FileTransfer();
-	console.log("About to start transfer");
 	alert(store);
 	alert(fileName);
-	alert(uri);	
+	alert(uri);
+	
+	
+	var fileTransfer = new FileTransfer();
+	console.log("About to start transfer");
+		
 	
 	fileTransfer.download(uri, store, 
 		function(entry) {
