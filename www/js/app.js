@@ -32,7 +32,11 @@ function downloadAsset(dir) {
 	alert(store);
 	alert(fileName);
 	alert(assetURL + fileName);
-	alert (dir);
+	
+	var ruta = dir.toURL() + '/' + fileName;
+	
+	alert (ruta);
+	
 	
 	var fileTransfer = new FileTransfer();
 	console.log("About to start transfer");
